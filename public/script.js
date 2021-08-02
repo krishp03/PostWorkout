@@ -1,4 +1,6 @@
 const login = () => {
+
+    console.log("running");
     var provider = new firebase.auth.GoogleAuthProvider();
 
     firebase.auth()

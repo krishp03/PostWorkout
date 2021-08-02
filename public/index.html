@@ -11,7 +11,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="columns is-vcentered">
@@ -23,30 +30,9 @@
             </h1>
             <br>
           </div>
-          <div class="field">
-            <label class="label">Username</label>
-            <div class="control has-icons-right">
-              <input class="input" type="text">
-              <span class="icon is-small is-right">
-                <i class="fa fa-user"></i>
-              </span>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Password</label>
-            <div class="control has-icons-right">
-              <input class="input" type="password">
-              <span class="icon is-small is-right">
-                <i class="fa fa-key"></i>
-              </span>
-            </div>
-          </div>
           <div class="has-text-centered">
-            <a class="button is-vcentered is-primary is-outlined" href = "home.html">Login</a>
-          </div>
-          <div class="has-text-centered">
-            <a href="signup.html"> Don't you have an account? Sign up now!</a>
-          </div>   
+            <a class="button is-vcentered is-primary is-outlined" onclick="login()">Login</a>
+          </div>  
         </section>
       </div>
       <div id="particles-js" class="interactive-bg column is-8">
