@@ -22,7 +22,7 @@ const handleNoteSubmit = () => {
   const noteImage = document.querySelector('#noteImage')
    console.log(noteTitle.value)
   // 2. Format the data and write it to our database
-  firebase.database().ref(`users/pos${googleUser.uid}`).push({
+  firebase.database().ref(`users/${googleUser.uid}`).push({
     title: noteTitle.value,
     text: noteText.value,
     image: noteImage.value
@@ -37,6 +37,7 @@ const handleNoteSubmit = () => {
   });
 }
 
+/*
 const getNotes = (userId) => {
   const notesRef = firebase.database().ref(`users/${userId}`);
   notesRef.on('value', (snapshot) => {
@@ -125,3 +126,5 @@ const saveEditedNote = () => {
     closeEditModal()
 
 }
+
+*/
