@@ -46,7 +46,35 @@
                     <input type="file" id="noteImage" name="img" accept="image/*">
                 </form>
               </div>
+                <div class = "field">
+                  <div class="select" >
+                <select id = "select">
+                    <option id = "default">Select Category</option>
+                    <option id = "diet">Diet</option>
+                    <option id = "workout">Workout</option>
+                </select>
+              </div>
+
+              <select id="mystuff">
+   <option value="0">-- Choose One --</option>       
+   <option value="opt1">House</option>
+   <option value="opt2">Car</option>
+   <option value="opt3">Bicycle</option>
+</select>
+
+<div class="mystaff_hide mystaff_opt1">
+    some content to show on option House selected
+</div>
+<div class="mystaff_hide mystaff_opt2">
+    some content to show on option Car selected
+</div>
+<div class="mystaff_hide mystaff_opt3">
+    some content to show on option Bicycle selected
+</div>
+
+              <br>
               <div class="control">
+                    <br>
                 <button class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="handleNoteSubmit()">Create Post</button>
               </div>
             </div>
@@ -75,7 +103,7 @@
         </div>
       </div>
     </section>
-        <script src="feed.js"></script>
+        <script src="create-posts.js"></script>
 
   </body>
 </html>
