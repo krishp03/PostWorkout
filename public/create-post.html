@@ -9,7 +9,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
 	  <link rel="stylesheet" href="css/writeNote.css">
-    <!-- update the version number as needed -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
@@ -29,15 +37,15 @@
             <div class="column is-one-third has-text-left">
             <h1 class = "is-size-3"> Create post </h1>
               <div class="field">
-                <label class="label">Title</label>
+                <label>Title</label>
                 <div class="control">
-                  <input class="input is-medium" type="text" id="noteTitle">
+                  <input placeholder="Title of your post" class="input is-medium" type="text" id="noteTitle">
                 </div>
               </div>
               <div class="field">
-                <label class="label">Caption</label>
+                <label>Caption</label>
                 <div class="control">
-                  <textarea class="textarea is-medium" id="noteText"></textarea>
+                  <textarea placeholder = "Describe your post" class="textarea is-medium" id="noteText"></textarea>
                 </div>
               </div>
               <div class = "field">
@@ -45,32 +53,19 @@
                   <form action="/action_page.php">
                     <input type="file" id="noteImage" name="img" accept="image/*">
                 </form>
+                <br>
               </div>
                 <div class = "field">
                   <div class="select" >
                 <select id = "select">
-                    <option id = "default">Select Category</option>
-                    <option id = "diet">Diet</option>
-                    <option id = "workout">Workout</option>
+                    <option value = "0" id = "default">Select Category</option>
+                    <option value = "opt1" id = "diet">Diet</option>
+                    <option value = "opt2" id = "workout">Workout</option>
                 </select>
               </div>
+<div id="msgbox"></div>
 
-              <select id="mystuff">
-   <option value="0">-- Choose One --</option>       
-   <option value="opt1">House</option>
-   <option value="opt2">Car</option>
-   <option value="opt3">Bicycle</option>
-</select>
 
-<div class="mystaff_hide mystaff_opt1">
-    some content to show on option House selected
-</div>
-<div class="mystaff_hide mystaff_opt2">
-    some content to show on option Car selected
-</div>
-<div class="mystaff_hide mystaff_opt3">
-    some content to show on option Bicycle selected
-</div>
 
               <br>
               <div class="control">
