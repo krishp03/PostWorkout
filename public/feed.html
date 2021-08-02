@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fire Notes</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+	  <link rel="stylesheet" href="css/writeNote.css">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body>
+
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns is-8 is-variable ">
+
+            
+            
+            <!-- NOTE FORM -->
+            <div class="column is-one-third has-text-left">
+            <h1 class = "is-size-3"> Create post </h1>
+              <div class="field">
+                <label class="label">Title</label>
+                <div class="control">
+                  <input class="input is-medium" type="text" id="noteTitle">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Caption</label>
+                <div class="control">
+                  <textarea class="textarea is-medium" id="noteText"></textarea>
+                </div>
+              </div>
+              <div class = "field">
+                  <label class="label">Upload an image</label>
+                  <form action="/action_page.php">
+                    <input type="file" id="noteImage" name="img" accept="image/*">
+                </form>
+              </div>
+              <div class="control">
+                <button class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="handleNoteSubmit()">Create Note</button>
+              </div>
+            </div>
+              <div id="app" class="columns is-multiline">
+          <!-- Note cards will render here -->
+        </div>
+        <div id = "editNoteModal" class = "modal">
+             <div class="modal-background"></div>
+                <div class="modal-card">
+                   <section class = "modal-card-body">
+                       Title: <input class = "input is-normal" id = "editTitleInput" type = "text">
+                       Text: <input class = "input is-normal" id = "editTextInput" type = "text">
+                        <input id = "editNoteId" type = "hidden">
+                    </section>
+                    <footer class = "modal-card-foot">
+                        <button class = "button is-success" onclick = "saveEditedNote()">
+                            Save changes
+                        </button>
+                        <button class = "button" onclick = "closeEditModal()">
+                            Cancel
+                        </button>                    
+                    </footer>
+                </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <script src="feed.js"></script>
+
+  </body>
+</html>
