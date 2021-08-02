@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="assets/img/logo_r_resumme.png" type="image/x-icon" />
-    <title>Log In</title>
+    <title>Profile</title>
     <script src="assets/js/particles.js"></script>
     <script src="assets/js/main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -18,20 +18,26 @@
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <link rel="stylesheet" href="main.css">
-    <script src="script.js"></script>
+    <script src="profile.js"></script>
   </head>
   <body>
     <div class="columns is-vcentered">
       <div class="login column is-4">
         <section class="section">
           <div>
-            <h1 class = "is-size-1"> 
-              Post Workout
+            <h1 class = "name is-size-1"> 
+              Welcome, User
             </h1>
             <br>
           </div>
           <div class="has-text-centered">
-            <a class="button is-vcentered is-primary is-outlined" onclick="login()">Login with Google</a>
+            <a class="button is-vcentered is-primary is-outlined" onclick="login()">View Your Posts</a>
+          </div>  
+          <div class="has-text-centered">
+            <a class="button is-vcentered is-primary is-outlined" onclick="login()">View Your Workouts</a>
+          </div>  
+          <div class="has-text-centered">
+            <a class="button is-vcentered is-primary is-outlined" onclick="login()">View Your Meals</a>
           </div>  
         </section>
       </div>
