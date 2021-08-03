@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Google Maps</title>
+    <script type='text/javascript' src='key.js'></script>
     <style type="text/css">
       /* Set the size of the div element that contains the map */
       #map {
@@ -17,6 +18,7 @@
        <!--The div element for the map -->
     <div id="map"></div>
      <script>
+     var mykey = config.MY_KEY;
       function initMap() {
           var options = {
               zoom: 8,
@@ -31,7 +33,7 @@
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHbK_HQrWt5-nCUqcZgyrSXMxi3Ou8L4&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=${mykey}&callback=initMap&libraries=&v=weekly"
       async
     ></script>
   </body>
