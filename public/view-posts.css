@@ -1,6 +1,4 @@
-
-  
-  .hero-body {
+.hero-body {
 background: linear-gradient(90deg, rgba(238,239,255,1) 0%, rgba(158,188,246,1) 49%, rgba(158,160,246,1) 100%);
   }
   body {
@@ -34,16 +32,16 @@ background: transparent;
     text-align: center;
   }
 
-  .description {
+  .description{
       color: white;
   }
 
-  #continue {
+  #continue{
       border-color: white;
       color: white;
   }
 
-  #continue:hover {
+  #continue:hover{
     background: white;
     color: black;
 }
