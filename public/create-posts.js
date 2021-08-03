@@ -48,8 +48,8 @@ const handleNoteSubmit = () => {
   .then(() => {
     noteTitle.value = "";
     noteText.value = "";
-    noteText.value = "";
-    noteLabel.value = "";
+    noteImage.value = '';
+    noteLabel.value = '';
   });
 
 
