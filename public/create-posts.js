@@ -32,6 +32,7 @@ const handleNoteSubmit = () => {
 
   const select = document.querySelector('#select');
   const noteLabel = select.options[select.selectedIndex];
+  console.log(noteLabel.value)
 
     
 }
