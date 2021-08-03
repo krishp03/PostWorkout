@@ -44,12 +44,19 @@ const createCard = (post) => {
         <header class="card-header">
           <p class="card-header-title">${post.title}</p>
         </header>
-        <div class="card-image">
-          <img id = "img" src = "${post.image}">
-        </div>
+        <header class="card-header">
+          <p class="card-header-title">${post.label}</p>
+        </header>
+        
         <div class="card-content">
           <div class="content">${post.text}</div>
         </div>
+         <footer class = "footer-1">
+          <p class="card-footer">Protein: ${post.protein}</p>
+            <p class="card-footer">Carbs: ${post.carbs}</p>
+          <p class="card-footer">Fat: ${post.fat}</p>
+
+        </footer>
 
       </div>
     </div>
