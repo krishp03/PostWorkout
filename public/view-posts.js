@@ -20,6 +20,7 @@ const getPosts = (userId) => {
     const notesRef = firebase.database().ref(`users/${userId}`);
     notesRef.on('value', (snapshot) => {
         const data = snapshot.val();
+        console.log(data);
         renderDataAsHtml(data);
     });
 };

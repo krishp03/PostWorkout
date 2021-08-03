@@ -1,4 +1,4 @@
-let googleUser;
+let googleUserId;
 
 
 
@@ -8,77 +8,62 @@ window.onload = (event) => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log('Logged in as: ' + user.displayName);
-      googleUser = user;
+      googleUserId = user.uid;
+      getPosts();
     } else {
       window.location = 'index.html'; // If not logged in, navigate back to login page.
     }
   });
 };
 
-const handleNoteSubmit = () => {
-  // 1. Capture the form data
-  const noteTitle = document.querySelector('#noteTitle');
-  const noteText = document.querySelector('#noteText');
-  const noteImage = document.querySelector('#noteImage')
-   console.log(noteTitle.value)
-  // 2. Format the data and write it to our database
-  firebase.database().ref(`users/${googleUser.uid}`).push({
-    title: noteTitle.value,
-    text: noteText.value,
-    image: noteImage.value
-  })
-     
+const getPosts = () => {
+    const ref = firebase.database().ref();
+    ref.on('value', (snapshot) => {
+        users = snapshot.val().users;
+        for(let uid in users){
+            if(uid === googleUserId){
+                continue;
+            }
+            else{
+                const postsRef = firebase.database().ref(`users/${uid}`);
+                postsRef.on('value', (postSnapshot) => {
+                const post = postSnapshot.val();
+                renderDataAsHtml(post);
+     });
+            }
+        }
+    });
+};
 
-  // 3. Clear the form so that we can write a new note
-  .then(() => {
-    noteTitle.value = "";
-    noteText.value = "";
-    noteText.value = '';
-  });
-}
+const renderDataAsHtml = (data) => {
+    let cards = ``;
+    for (const noteItem in data) {
+        const note = data[noteItem];
+        // For each note create an HTML card
+        cards += createCard(note)
+    };
+    // Inject our string of HTML into our viewNotes.html page
+    document.querySelector('#app').innerHTML = cards;
+};
 
+const createCard = (post) => {
+    return `
+    <div class="column is-one-quarter">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">${post.title}</p>
+        </header>
+        <header class="card-header">
+          <p class="card-header-title">${post.title}</p>
+        </header>
+        <div class="card-image">
+          <img id = "img" src = "${post.image}">
+        </div>
+        <div class="card-content">
+          <div class="content">${post.text}</div>
+        </div>
 
-// const deleteNote = (noteId) => {
-//     if(confirm("Are you sure you want to delete this note?")){
-//         //then put the card in the archive section
-
-//         firebase.database().ref(`users/${googleUserId}/${noteId}`).remove();
-//     } else {
-//         alert("Deletion cancelled!");
-//     }
-// }
-
-// const editNote = (noteId) => {
-//     const editNoteModal = document.querySelector('#editNoteModal')
-//     const notesRef = firebase.database().ref(`users/${googleUserId}`)
-//     notesRef.on('value', (snapshot) => {
-//         const data = snapshot.val()
-//         const note = data[noteId]
-//         document.querySelector('#editTitleInput').value = note.title;
-//         document.querySelector('#editTextInput').value = note.text;
-//         document.querySelector('#editNoteId').value = noteId;
-
-//     })
-//     editNoteModal.classList.toggle('is-active')
-// }
-
-// const closeEditModal = () => {
-//     const editNoteModal = document.querySelector('#editNoteModal')
-//     editNoteModal.classList.toggle('is-active')
-
-// }
-
-// const saveEditedNote = () => {
-//     const noteTitle = document.querySelector("#editTitleInput").value;
-//     const noteText = document.querySelector("#editTextInput").value;
-//     const noteId = document.querySelector("#editNoteId").value;
-//     const noteEdits = {
-//         title: noteTitle,
-//         text: noteText,
-//     }
-//     firebase.database().ref(`users/${googleUserId}/${noteId}`).update(noteEdits)
-//     closeEditModal()
-
-// }
-
-// */
+      </div>
+    </div>
+  `;
+};
