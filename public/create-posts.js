@@ -15,9 +15,9 @@ window.onload = (event) => {
 
 $('#select').change(function() {
     opt = $(this).val();
-    if (opt =="opt1") {
+    if (opt =="Diet") {
         $('#msgbox').html('<br><label  class="ds">Protein: </label> <input placeholder = "Grams of protein" id = "protein" class="input is-medium" type="text" id="noteTitle"><br><label class="ds">Fat: </label> <input  placeholder = "Grams of Fat" id = "fat" class="input is-medium" type="text" id="noteTitle"><br><label class="ds">Carbs: </label> <input placeholder = "Grams of Carbs" id = "carbs" class="input is-medium" type="text" id="noteTitle">');
-    }else if (opt == "opt2") {
+    }else if (opt == "Workout") {
         $('#msgbox').html('<br> <label  class="ds">Number of Sets: </label> <input  placeholder = "Number of sets" id = "sets" class="input is-medium" type="text" id="noteTitle">');
     }else if(opt == "0"){
     $('#msgbox').html('')
@@ -48,8 +48,8 @@ const handleNoteSubmit = () => {
   .then(() => {
     noteTitle.value = "";
     noteText.value = "";
-    noteText.value = '';
-    noteLabel.value = '';
+    noteText.value = "";
+    noteLabel.value = "";
   });
 
 
