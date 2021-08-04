@@ -17,6 +17,7 @@ background: linear-gradient(90deg, rgba(238,239,255,1) 0%, rgba(158,188,246,1) 4
   }
   .card{
 background: transparent;
+margin-left: 10%;
   }
   .card-content.s1{
     background: transparent;
@@ -48,4 +49,10 @@ background: transparent;
 
 .footer-1{
     color: black; 
+}
+
+.modal-card{
+    color: black;
+   background: rgb(236,255,230);
+background: linear-gradient(90deg, rgba(236,255,230,1) 0%, rgba(207,244,195,1) 35%, rgba(147,224,143,1) 100%); 
 }
