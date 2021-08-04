@@ -110,5 +110,5 @@ const handleNoteSubmit = () => {
 
         });
     $('#msgbox').html('')
-
+    
 }
