@@ -38,7 +38,8 @@ const renderDataAsHtml = (data) => {
 
 const createCard = (post, noteId) => {
     console.log(post.title);
-    return `
+    if(post.label === "Diet"){
+        return `
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
@@ -69,6 +70,40 @@ const createCard = (post, noteId) => {
       </div>
     </div>
   `;
+    }
+    else{
+        return `
+    <div class="column is-one-quarter">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">${post.title}</p>
+        </header>
+        <header class="card-header">
+          <p class="card-header-title">${post.label}</p>
+        </header>
+        
+        <div class="card-content">
+          <div class="content">${post.text}</div>
+         
+        <p class="card-footer">Sets: ${post.sets}</p>
+           
+         </div>
+
+         <footer class = "card-footer">
+         
+
+            <a href = "#" class = "card-footer-item" onclick = "editNote('${noteId}')">
+            Edit
+            </a>
+            <a href = "#" class = "card-footer-item" onclick = "deleteNote('${noteId}')">
+            Delete
+            </a>
+            </footer>
+      </div>
+    </div>
+  `;
+    }
+    
 }
 
 
