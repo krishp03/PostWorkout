@@ -52,6 +52,7 @@ const checkIfValid = () => {
 const handleNoteSubmit = () => {
     // 1. Capture the form data
     const noteTitle = document.querySelector('.name');
+    console.log(noteTitle)
     const noteText = document.querySelector('#noteText');
     var protein = document.querySelector('#protein')
     var carbs = document.querySelector('#carbs')
@@ -76,7 +77,7 @@ const handleNoteSubmit = () => {
 
 
     firebase.database().ref(`users/${googleUser.uid}`).push({
-        title: noteTitle,
+        title: googleUser.displayName,
         text: noteText.value,
         label: noteLabel.value,
         protein: protein,
