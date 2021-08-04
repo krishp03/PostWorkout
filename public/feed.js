@@ -56,7 +56,7 @@ const createCard = (post, noteId) => {
           <p class="card-header-title">Post by: ${post.title}</p>
         </header>
         <header class="card-header">
-          <p class="card-header-title">${post.label}</p>
+          <p class="card-header-title">Category: ${post.label}</p>
         </header>
         
         <div class="card-content">
@@ -80,7 +80,7 @@ const createCard = (post, noteId) => {
           <p class="card-header-title">Post by: ${post.title}</p>
         </header>
         <header class="card-header">
-          <p class="card-header-title">${post.label}</p>
+          <p class="card-header-title">Category: ${post.label}</p>
         </header>
         
         <div class="card-content">
