@@ -1,0 +1,8 @@
+#map{
+    max-height: 150%;
+}
+
+
+body{
+background: linear-gradient(90deg, rgba(231,255,253,1) 0%, rgba(0,217,255,1) 100%);
+}
