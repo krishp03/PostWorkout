@@ -12,7 +12,7 @@ const login = () => {
 
             // The signed-in user info.
             var user = result.user;
-            window.location = 'home.html';
+            window.location = 'homepage.html';
         }).catch((error) => {
             // Handle Errors here.
             var errorCode = error.code;

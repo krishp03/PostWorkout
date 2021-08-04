@@ -1,98 +1,51 @@
-.carousel-inner{
-  width:100%;
-  max-height: 800px !important;
-}
 
-.carousel{
-    margin-top: 0px;
+  
+  .hero-body {
+background: linear-gradient(90deg, rgba(231,255,253,1) 0%, rgba(0,217,255,1) 100%);  
 }
-.carousel-item{
+  body {
+background: linear-gradient(90deg, rgba(231,255,253,1) 0%, rgba(0,217,255,1) 100%);  
+}
+  
+  .is-centered {
+background: linear-gradient(90deg, rgba(231,255,253,1) 0%, rgba(0,217,255,1) 100%);
+  }
+  .title {
+    color: white;
+  }
+  
+  .subtitle{
+    color: white;
+  }
+  .card{
+background: transparent;
+  }
+  .card-content.s1{
+    background: transparent;
+  }
+  
+  img {
+    padding: 5px;
+  }
+  
+  footer{
+    padding: 50px;
+    color: white;
     text-align: center;
-  width: 100%;
-    min-height: 800px;/* Prevent carousel from being distorted if for some reason image doesn't load */
+  }
+
+  .description {
+      color: white;
+  }
+
+  #continue {
+      border-color: white;
+      color: white;
+  }
+
+  #continue:hover {
+    background: white;
+    color: black;
 }
+
   
-.carousel-indicators li {
-    width: 7px;
-    height: 7px;
-    border-radius: 100%;
-}
-
-#firstImage {
-  max-width: 75%;
-  position: absolute; 
-  margin-left: 5%;
-  margin-top: 5%;
-}
-#secondImage {
-  max-width: 55%;
-  position: absolute; 
-  margin-left: 5%;
-  margin-top: 2%;
-}
-
-#thirdImage {
-  max-width: 45%;
-  position: absolute; 
-  margin-left: 12%;
-  margin-top: 5%;
-}
-
-#title-1{
-  position: absolute; 
-  margin:20% 10% 
-    
-  
-}
-h1{
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-}
-.nav-link{
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-}
-
-
-
-#first{
-  background: rgb(251,228,149);
-background: linear-gradient(90deg, rgba(251,228,149,1) 0%, rgba(238,188,19,1) 35%, rgba(255,196,0,1) 100%);
-}
-
-#logIn{
-  background: rgb(251,228,149);
-background: linear-gradient(90deg, rgba(251,228,149,1) 0%, rgba(238,188,19,1) 35%, rgba(255,196,0,1) 100%);
-}
-
-
-#second{
-background: rgb(255,210,215);
-background: linear-gradient(90deg, rgba(255,210,215,1) 0%, rgba(246,158,207,1) 49%, rgba(255,130,214,1) 100%);
-}
-
-#third{
-background: rgb(238,239,255);
-background: linear-gradient(90deg, rgba(238,239,255,1) 0%, rgba(158,188,246,1) 49%, rgba(158,160,246,1) 100%);
-}
-
-.navbar{
-      position:absolute;
-      width:100%;
-      z-index:10;
-      max-width:100%;
-}
-
-.card{
-  border-radius: 10%
-  position:absolute;
-      width:100%;
-      z-index:10;
-  margin: 25% 60% 
-    
-    
-}
-
-.hero-body{
-  background: white;
-}

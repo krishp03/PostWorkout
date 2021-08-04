@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="assets/img/logo_r_resumme.png" type="image/x-icon" />
@@ -17,31 +18,67 @@
     <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="profile.css">
     <script src="profile.js"></script>
   </head>
-  <body>
-    <div class="columns is-vcentered">
-      <div class="login column is-4">
-        <section class="section">
-          <div>
-            <h1 class = "name is-size-1"> 
-              Welcome, User
-            </h1>
-            <br>
-          </div>
 
-          <div class="has-text-centered">
-            <a class="button is-vcentered is-primary is-outlined" href="create-post.html">Create a Post</a>
-          </div>  
-          <div class="has-text-centered">
-            <a class="button is-vcentered is-primary is-outlined" href="view-posts.html">View Your Posts</a>
-          </div>
-        </section>
-      </div>
-      <div id="particles-js" class="interactive-bg column is-8">
-        <img id = "img" src = "assets/imgs/logo.png">
-      </div>              
+<body>
+    <section class="hero has-text-centered">
+        <div class="hero-body">
+            <a href="homepage.html">
+                <img src="assets/imgs/logo.png" alt="logo" />
+            </a>
+            <p class="title is-size-3">
+                Post Workout
+            </p>
+            <p class="name subtitle is-size-5">
+                Welcome, User
+            </p>
+        </div>
+    </section>
+    <div class="columns is-centered">
+        <div class="column is-one-third mt-4">
+            <a href="create-post.html">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img id="projects-img" src="assets/imgs/login.png" alt="login" />
+                        </figure>
+                    </div>
+                    <div class="card-content s1">
+                        <div class="content">
+                            <p class="title is-size-3">
+                                Create Post
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="column is-one-third mt-4">
+            <a href="view-posts.html">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img id="projects-img" src="assets/imgs/login.png" alt="login" />
+                        </figure>
+                    </div>
+                    <div class="card-content s1">
+                        <div class="content">
+                            <p class="title is-size-3">
+                                View Posts
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
-  </body>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
 </html>
