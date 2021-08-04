@@ -6,6 +6,7 @@ window.onload = (event) => {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             console.log('Logged in as: ' + user.displayName);
+            document.querySelector(".name").innerHTML = "Name: " + user.displayName
             googleUser = user;
         } else {
             window.location = 'index.html'; // If not logged in, navigate back to login page.
@@ -30,7 +31,7 @@ const checkIfValid = () => {
         alert("Select a category");
     } else {
         try {
-            document.querySelector('#noteTitle').value;
+            document.querySelector('.name').value;
             document.querySelector('#noteText').value;
             if (select.selectedIndex === 2) {
                 document.querySelector('#sets').value;
@@ -50,7 +51,7 @@ const checkIfValid = () => {
 
 const handleNoteSubmit = () => {
     // 1. Capture the form data
-    const noteTitle = document.querySelector('#noteTitle');
+    const noteTitle = document.querySelector('.name');
     const noteText = document.querySelector('#noteText');
     var protein = document.querySelector('#protein')
     var carbs = document.querySelector('#carbs')
@@ -75,7 +76,7 @@ const handleNoteSubmit = () => {
 
 
     firebase.database().ref(`users/${googleUser.uid}`).push({
-        title: noteTitle.value,
+        title: noteTitle,
         text: noteText.value,
         label: noteLabel.value,
         protein: protein,
@@ -93,14 +94,12 @@ const handleNoteSubmit = () => {
                 protein.value = "";
                 carbs.value = "";
                 fat.value = "";
-                noteTitle.value = "";
                 noteText.value = "";
                 noteText.value = "";
                 select.selectedIndex = null;
             }
             else if (select.selectedIndex === 2) {
                 sets.value = "";
-                noteTitle.value = "";
                 noteText.value = "";
                 noteText.value = "";
                 select.selectedIndex = null;
