@@ -43,10 +43,10 @@ const createCard = (post, noteId) => {
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title">${post.title}</p>
+          <p class="card-header-title">Posts by: ${post.title}</p>
         </header>
         <header class="card-header">
-          <p class="card-header-title">${post.label}</p>
+          <p class="card-header-title">Category: ${post.label}</p>
         </header>
         
         <div class="card-content">
@@ -76,10 +76,10 @@ const createCard = (post, noteId) => {
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title">${post.title}</p>
+          <p class="card-header-title">Posts by: ${post.title}</p>
         </header>
         <header class="card-header">
-          <p class="card-header-title">${post.label}</p>
+          <p class="card-header-title">Category: ${post.label}</p>
         </header>
         
         <div class="card-content">
