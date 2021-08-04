@@ -53,7 +53,7 @@ const createCard = (post, noteId) => {
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title">${post.title}</p>
+          <p class="card-header-title">Post by: ${post.title}</p>
         </header>
         <header class="card-header">
           <p class="card-header-title">${post.label}</p>
@@ -67,16 +67,7 @@ const createCard = (post, noteId) => {
           <p class="card-footer">Fat: ${post.fat}</p>
          </div>
 
-         <footer class = "card-footer">
-         
-
-            <a href = "#" class = "card-footer-item" onclick = "editNote('${noteId}')">
-            Edit
-            </a>
-            <a href = "#" class = "card-footer-item" onclick = "deleteNote('${noteId}')">
-            Delete
-            </a>
-            </footer>
+        
       </div>
     </div>
   `;
@@ -86,7 +77,7 @@ const createCard = (post, noteId) => {
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title">${post.title}</p>
+          <p class="card-header-title">Post by: ${post.title}</p>
         </header>
         <header class="card-header">
           <p class="card-header-title">${post.label}</p>
@@ -99,16 +90,7 @@ const createCard = (post, noteId) => {
            
          </div>
 
-         <footer class = "card-footer">
          
-
-            <a href = "#" class = "card-footer-item" onclick = "editNote('${noteId}')">
-            Edit
-            </a>
-            <a href = "#" class = "card-footer-item" onclick = "deleteNote('${noteId}')">
-            Delete
-            </a>
-            </footer>
       </div>
     </div>
   `;
