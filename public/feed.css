@@ -19,6 +19,7 @@ background: linear-gradient(90deg, rgba(217,217,255,1) 0%, rgba(0,80,255,1) 100%
   }
   .card{
 background: transparent;
+margin-left: 10%;
   }
   .card-content.s1{
     background: transparent;

@@ -29,7 +29,7 @@ const getPosts = () => {
                 postsRef.on('value', (postSnapshot) => {
                 const post = postSnapshot.val();
                 renderDataAsHtml(post);
-     });
+             });
             }
         }
     });
