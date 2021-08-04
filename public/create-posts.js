@@ -77,7 +77,6 @@ const handleNoteSubmit = () => {
     firebase.database().ref(`users/${googleUser.uid}`).push({
         title: noteTitle.value,
         text: noteText.value,
-        image: noteImage.value,
         label: noteLabel.value,
         protein: protein,
         carbs: carbs,
