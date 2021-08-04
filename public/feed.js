@@ -46,8 +46,10 @@ const renderDataAsHtml = (data) => {
     document.querySelector('#app').innerHTML = cards;
 };
 
-const createCard = (post) => {
-    return `
+const createCard = (post, noteId) => {
+    console.log(post.title);
+    if(post.label === "Diet"){
+        return `
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
@@ -59,15 +61,57 @@ const createCard = (post) => {
         
         <div class="card-content">
           <div class="content">${post.text}</div>
-        </div>
-         <footer class = "footer-1">
-          <p class="card-footer">Protein: ${post.protein}</p>
+         
+        <p class="card-footer">Protein: ${post.protein}</p>
             <p class="card-footer">Carbs: ${post.carbs}</p>
           <p class="card-footer">Fat: ${post.fat}</p>
+         </div>
 
-        </footer>
+         <footer class = "card-footer">
+         
 
+            <a href = "#" class = "card-footer-item" onclick = "editNote('${noteId}')">
+            Edit
+            </a>
+            <a href = "#" class = "card-footer-item" onclick = "deleteNote('${noteId}')">
+            Delete
+            </a>
+            </footer>
       </div>
     </div>
   `;
-};
+    }
+    else{
+        return `
+    <div class="column is-one-quarter">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">${post.title}</p>
+        </header>
+        <header class="card-header">
+          <p class="card-header-title">${post.label}</p>
+        </header>
+        
+        <div class="card-content">
+          <div class="content">${post.text}</div>
+         
+        <p class="card-footer">Sets: ${post.sets}</p>
+           
+         </div>
+
+         <footer class = "card-footer">
+         
+
+            <a href = "#" class = "card-footer-item" onclick = "editNote('${noteId}')">
+            Edit
+            </a>
+            <a href = "#" class = "card-footer-item" onclick = "deleteNote('${noteId}')">
+            Delete
+            </a>
+            </footer>
+      </div>
+    </div>
+  `;
+    }
+    
+}
