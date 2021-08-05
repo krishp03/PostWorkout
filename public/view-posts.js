@@ -118,7 +118,6 @@ const editNote = (noteId) => {
     notesRef.on('value', (snapshot) => {
         const data = snapshot.val()
         const note = data[noteId]
-        document.querySelector('#editTitleInput').value = note.title;
         document.querySelector('#editTextInput').value = note.text;
         document.querySelector('#editNoteId').value = noteId;
 
@@ -133,11 +132,9 @@ const closeEditModal = () => {
 }
 
 const saveEditedNote = () => {
-    const noteTitle = document.querySelector("#editTitleInput").value;
     const noteText = document.querySelector("#editTextInput").value;
     const noteId = document.querySelector("#editNoteId").value;
     const noteEdits = {
-        title: noteTitle,
         text: noteText,
     }
     firebase.database().ref(`users/${googleUserId}/${noteId}`).update(noteEdits)
