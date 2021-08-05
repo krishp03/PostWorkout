@@ -40,7 +40,7 @@ const createCard = (post, noteId) => {
     console.log(post.title);
     if(post.label === "Diet"){
         return `
-    <div class="column is-one-quarter">
+    <div class="column is-one-third">
       <div class="card">
         <header class="card-header">
           <p class="card-header-title">Posts by: ${post.title}</p>
@@ -73,7 +73,7 @@ const createCard = (post, noteId) => {
     }
     else{
         return `
-    <div class="column is-one-quarter">
+    <div class="column is-one-third">
       <div class="card">
         <header class="card-header">
           <p class="card-header-title">Posts by: ${post.title}</p>
