@@ -12,6 +12,8 @@ firebase-debug.*.log*
 
 # Firebase config
 /public/key.js
+
+/public/gym.html
 /home/shruti_p2003/team-14/public/key.js
 
 # Uncomment this if you'd like others to create their own Firebase project.
