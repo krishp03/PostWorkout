@@ -10,16 +10,16 @@ p{
     color: black !important;
 }
 .hero-body {
-background: linear-gradient(90deg, rgba(1,0,255,1) 0%, rgba(0,255,229,1) 100%);
+background: linear-gradient(90deg, rgba(255,208,211,1) 0%, rgba(230,146,150,1) 35%, rgba(201,93,99,1) 76%);
 
 }
   body {
-background: linear-gradient(90deg, rgba(1,0,255,1) 0%, rgba(0,255,229,1) 100%);
+background: linear-gradient(90deg, rgba(255,208,211,1) 0%, rgba(230,146,150,1) 35%, rgba(201,93,99,1) 76%);
 
 }
   
   .is-centered {
-background: linear-gradient(90deg, rgba(1,0,255,1) 0%, rgba(0,255,229,1) 100%);
+background: linear-gradient(90deg, rgba(255,208,211,1) 0%, rgba(230,146,150,1) 35%, rgba(201,93,99,1) 76%);
 
 }
   .title {

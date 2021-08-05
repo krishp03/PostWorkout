@@ -3,14 +3,14 @@
       color: white;
   }
   .hero-body {
-background: linear-gradient(90deg, rgba(255,137,249,1) 0%, rgba(255,69,134,1) 100%);
+background: linear-gradient(90deg, rgba(213,219,236,1) 0%, rgba(152,177,252,1) 35%, rgba(73,109,219,1) 76%);
   }
   body {
-background: linear-gradient(90deg, rgba(255,137,249,1) 0%, rgba(255,69,134,1) 100%);
+background: linear-gradient(90deg, rgba(213,219,236,1) 0%, rgba(152,177,252,1) 35%, rgba(73,109,219,1) 76%);
   }
   
   .is-centered {
-background: linear-gradient(90deg, rgba(255,137,249,1) 0%, rgba(255,69,134,1) 100%);
+background: linear-gradient(90deg, rgba(213,219,236,1) 0%, rgba(152,177,252,1) 35%, rgba(73,109,219,1) 76%);
   }
   .title {
     color: white;

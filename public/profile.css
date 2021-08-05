@@ -1,14 +1,14 @@
 
   
   .hero-body {
-background: linear-gradient(90deg, rgba(0,255,143,1) 0%, rgba(0,255,220,1) 100%);
+background: linear-gradient(90deg, rgba(212,216,235,1) 0%, rgba(161,172,231,1) 35%, rgba(109,121,187,1) 76%);
 }
   body {
-background: linear-gradient(90deg, rgba(0,255,143,1) 0%, rgba(0,255,220,1) 100%);
+background: linear-gradient(90deg, rgba(212,216,235,1) 0%, rgba(161,172,231,1) 35%, rgba(109,121,187,1) 76%);
 }
   
   .is-centered {
-background: linear-gradient(90deg, rgba(0,255,143,1) 0%, rgba(0,255,220,1) 100%);
+background: linear-gradient(90deg, rgba(212,216,235,1) 0%, rgba(161,172,231,1) 35%, rgba(109,121,187,1) 76%);
   }
   .title {
     color: white;
