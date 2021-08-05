@@ -6,6 +6,7 @@
 <link rel="shortcut icon" type="image/jpg" href="assets/Favicon.png"/>
 
     <script type='text/javascript' src='key.js'></script>
+    <script type='text/javascript' src='gym.js' defer></script>
     <style type="text/css">
       /* Set the size of the div element that contains the map */
       #map {
@@ -20,23 +21,10 @@
     <h1>My Google Maps </h1>
        <!--The div element for the map -->
     <div id="map"></div>
-     <script>
-     var mykey = config.MY_KEY;
-      function initMap() {
-          var options = {
-              zoom: 8,
-              center: { lat: 42.3601, lng: -71.0589 }
-          }
-
-        var map = new google.maps.Map(document.getElementById('map'), options);
-    
-        
-      }
-    </script>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=${mykey}&callback=initMap&libraries=&v=weekly"
+    <script class = "map"
+      src=""
       async
     ></script>
   </body>
