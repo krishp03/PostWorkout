@@ -3,3 +3,31 @@ ORANGE: background: linear-gradient(90deg, rgba(255,217,174,1) 0%, rgba(255,135,
 AQUA/GREEN: background: linear-gradient(90deg, rgba(0,255,143,1) 0%, rgba(0,255,220,1) 100%);
 LIGHT BLUE: background: linear-gradient(90deg, rgba(231,255,253,1) 0%, rgba(0,217,255,1) 100%);
 DARK BLUE: background: linear-gradient(90deg, rgba(217,217,255,1) 0%, rgba(0,80,255,1) 100%);
+
+
+PRINCETON ORANGE: EE8434
+    GRADIENT: background: rgb(255,210,176);
+background: linear-gradient(90deg, rgba(255,210,176,1) 0%, rgba(255,186,134,1) 35%, rgba(238,132,52,1) 76%);
+
+INDIAN RED: C95D63
+    GRADIENT: background: rgb(255,208,211);
+background: linear-gradient(90deg, rgba(255,208,211,1) 0%, rgba(230,146,150,1) 35%, rgba(201,93,99,1) 76%);
+
+ENGLISH LAVENDER: AE8799
+    GRADIENT: background: rgb(255,239,247);
+background: linear-gradient(90deg, rgba(255,239,247,1) 0%, rgba(219,183,200,1) 35%, rgba(174,135,153,1) 76%);
+
+GLAYCOUS: 717EC3
+    GRADIENT: background: rgb(212,216,235);
+background: linear-gradient(90deg, rgba(212,216,235,1) 0%, rgba(161,172,231,1) 35%, rgba(109,121,187,1) 76%);
+
+ROYAL BLUE LIGHT: 496DDB
+    GRADIENT: background: rgb(213,219,236);
+background: linear-gradient(90deg, rgba(213,219,236,1) 0%, rgba(152,177,252,1) 35%, rgba(73,109,219,1) 76%);
+
+
+
+
+
+
+
