@@ -19,8 +19,10 @@ window.onload = (event) => {
 const getPosts = () => {
     const ref = firebase.database().ref();
     ref.on('value', (snapshot) => {
+      document.querySelector('#app').innerHTML = "";
         users = snapshot.val().users;
         for(let uid in users){
+            console.log(uid);
             if(uid === googleUserId){
                 continue;
             }
@@ -40,10 +42,11 @@ const renderDataAsHtml = (data) => {
     for (const noteItem in data) {
         const note = data[noteItem];
         // For each note create an HTML card
-        cards += createCard(note)
+        cards = cards + createCard(note)
+        console.log(cards)
     };
     // Inject our string of HTML into our viewNotes.html page
-    document.querySelector('#app').innerHTML = cards;
+    document.querySelector('#app').innerHTML += cards;
 };
 
 const createCard = (post, noteId) => {
